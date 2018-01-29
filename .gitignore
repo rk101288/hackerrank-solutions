@@ -14,7 +14,7 @@
 
 # IDEA
 .idea/
-*.iml
+hackerrank-solutions.iml
 
 # Target
 out/
