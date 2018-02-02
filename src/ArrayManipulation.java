@@ -30,11 +30,19 @@ public class ArrayManipulation {
             int b = in.nextInt();
             int k = in.nextInt();
 
-            for (int i = a - 1; i <= b - 1; i++) {
-                list[i] = list[i] + k;
-                if (max < list[i]) {
-                    max = list[i];
-                }
+            list[a - 1] += k;
+
+            if(b < n) {
+                list[b] -= k;
+            }
+
+        }
+
+        long incrementer = 0;
+        for (int i = 0; i < n; i++) {
+            incrementer += list[i];
+            if (max < incrementer) {
+                max = incrementer;
             }
         }
 
