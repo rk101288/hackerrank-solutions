@@ -11,14 +11,23 @@ import java.util.stream.Collectors;
 public class ArrayPairs {
     static int pairs(int k, int[] arr) {
         int result = 0;
+        int i = 0;
+        int j = i+1;
+        int n = arr.length;
+        Arrays.sort(arr);
 
-        for(int i = 0; i < arr.length; i++) {
-            List<Integer> newArr = Arrays.stream(arr).boxed().collect(Collectors.toList()).subList(i + 1, arr.length);
-            for(int j = 0; j < newArr.size(); j++) {
-                    if(Math.abs(arr[i] - newArr.get(j)) == k) {
-                        result ++;
-                    }
+        while(j < n) {
+            int diff = arr[j] - arr[i];
+
+            if(diff == k) {
+                result++;
+                j++;
+            } else if (diff > k) {
+                i++;
+            } else if (diff < k) {
+                j++;
             }
+
         }
         return result;
     }
