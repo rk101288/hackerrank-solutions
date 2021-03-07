@@ -4,7 +4,6 @@ import java.util.Scanner
   * Created by ricks on 9/17/17.
   */
 object MistVideoGame extends App {
-  override def main(args: Array[String]): Unit = {
     val sc = new Scanner(System.in)
     val p = sc.nextInt
     val d = sc.nextInt
@@ -13,7 +12,6 @@ object MistVideoGame extends App {
     val answer = howManyGames(p, d, m, s)
     println("Answer " +answer)
     answer
-  }
 
   def howManyGames(firstGame: Int, lessThan: Int, maximumSale: Int, dollarAvailable: Int): Int =  {
     var numberOfGames = 0

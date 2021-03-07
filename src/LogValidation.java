@@ -1,5 +1,3 @@
-import scala.Char;
-
 import java.io.*;
 import java.util.*;
 import java.text.*;

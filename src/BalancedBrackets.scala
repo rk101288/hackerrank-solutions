@@ -29,7 +29,6 @@ For each string, print whether or not the string of brackets is balanced on a ne
 
 
 object BalancedBrackets extends App {
-  override def main(args: Array[String]) {
     val sc = new java.util.Scanner(System.in)
     var numberOfInputs = sc.nextLine().toInt
 
@@ -49,7 +48,6 @@ object BalancedBrackets extends App {
         println("NO")
       }
     }
-  }
 
   def isMatching(c1: Char, c2: Char): Boolean = (c1, c2) match {
     case ('(',')') => true
